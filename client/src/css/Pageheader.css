@@ -1,0 +1,21 @@
+.page-header {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.page-header-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #18181b; /* ink-900 */
+  margin: 0;
+}
+
+.page-header-description {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #71717a; /* ink-500 */
+}

@@ -1,0 +1,67 @@
+.topbar {
+  display: flex;
+  height: 64px; /* h-16 */
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e4e7; /* paper-200 */
+  background-color: #fafafa; /* paper-50 */
+  padding: 0 24px;
+}
+
+.topbar-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #18181b; /* ink-900 */
+  margin: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-clock {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  color: #71717a; /* ink-500 */
+  margin: 0;
+}
+
+.topbar-icon-btn {
+  border-radius: 9999px;
+  padding: 8px;
+  color: #71717a; /* ink-500 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+.topbar-icon-btn:hover {
+  background-color: #e4e4e7; /* paper-200 */
+}
+
+.topbar-signout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--radius-control, 8px);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3f3f46; /* ink-700 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.topbar-signout-btn:hover {
+  background-color: #e4e4e7; /* paper-200 */
+}

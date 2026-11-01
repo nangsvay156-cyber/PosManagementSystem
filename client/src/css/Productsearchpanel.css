@@ -1,0 +1,255 @@
+.psp-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ---------- Search ---------- */
+
+.psp-search-row {
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 16px;
+}
+
+.psp-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-400);
+  pointer-events: none;
+}
+
+.psp-search-input {
+  width: 100%;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--paper-300);
+  background: var(--paper-50);
+  padding: 12px 16px 12px 40px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  color: var(--ink-900);
+  transition: .2s;
+}
+
+.psp-search-input::placeholder {
+  color: var(--ink-400);
+}
+
+.psp-search-input:focus {
+  outline: none;
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(184,117,45,.15);
+}
+
+/* ---------- Scroll Container ---------- */
+
+.psp-grid-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+}
+
+/* scrollbar */
+
+.psp-grid-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.psp-grid-scroll::-webkit-scrollbar-thumb {
+  background: #c7b299;
+  border-radius: 20px;
+}
+
+.psp-grid-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ---------- Grid ---------- */
+
+.psp-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 14px;
+  padding-bottom: 8px;
+}
+
+@media (min-width:640px){
+  .psp-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media (min-width:1024px){
+  .psp-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+
+.psp-full-row{
+  grid-column:1/-1;
+}
+
+.psp-loading-text{
+  padding:40px 0;
+  text-align:center;
+  color:var(--ink-400);
+}
+
+.psp-empty{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:40px 0;
+  color:var(--ink-400);
+}
+
+.psp-empty-icon{
+  margin-bottom:8px;
+  opacity:.5;
+}
+
+.psp-empty-text{
+  margin:0;
+}
+
+/* ---------- Product Tile ---------- */
+
+.psp-tile{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border-radius:var(--radius-card);
+  border:1px solid var(--paper-200);
+  background:var(--paper-50);
+  cursor:pointer;
+  transition:.15s;
+}
+
+.psp-tile:hover:not(.psp-tile-disabled){
+  transform:translateY(-3px);
+  border-color:var(--gold-500);
+  box-shadow:0 6px 14px rgba(43,27,18,.18);
+}
+
+.psp-tile:active:not(.psp-tile-disabled){
+  transform:scale(.97);
+}
+
+.psp-tile-disabled{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+.psp-tile-image-wrap{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:linear-gradient(
+      135deg,
+      var(--paper-100),
+      var(--paper-200)
+  );
+}
+
+.psp-tile-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.psp-tile:hover .psp-tile-image{
+  transform:scale(1.06);
+}
+
+.psp-tile-noimage{
+  color:var(--paper-300);
+}
+
+.psp-badge{
+  position:absolute;
+  top:6px;
+  right:6px;
+  border-radius:999px;
+  padding:2px 9px;
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+}
+
+.psp-badge-low{
+  background:var(--gold-500);
+}
+
+.psp-badge-out{
+  background:var(--brick-500);
+}
+
+.psp-added-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(58,90,64,.92);
+  opacity:0;
+  transition:.2s;
+}
+
+.psp-added-overlay.visible{
+  opacity:1;
+}
+
+.psp-added-icon{
+  color:#fff;
+  transform:scale(.5);
+  transition:.3s;
+}
+
+.psp-added-icon.visible{
+  transform:scale(1);
+}
+
+.psp-tile-info{
+  padding:10px;
+}
+
+.psp-tile-name{
+  margin:0;
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink-900);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.psp-tile-bottom-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:4px;
+}
+
+.psp-tile-price{
+  font-size:14px;
+  font-weight:700;
+  font-family:var(--font-mono);
+  color:var(--gold-600);
+}
+
+.psp-tile-stock{
+  font-size:12px;
+  color:var(--ink-400);
+}

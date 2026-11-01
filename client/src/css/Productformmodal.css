@@ -1,0 +1,135 @@
+.pfm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 4px 2px;
+}
+
+/* ---- Section grouping ---- */
+.pfm-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pfm-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  margin: 0 0 -4px 2px;
+}
+
+/* ---- Top row: image + core fields ---- */
+.pfm-top-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pfm-image-upload {
+  display: flex;
+  position: relative;
+  height: 104px;
+  width: 104px;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1.5px dashed #d4d4d8;
+  background-color: #fafafa;
+  transition: border-color 0.18s ease, background-color 0.18s ease, transform 0.1s ease;
+}
+
+.pfm-image-upload:hover {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+}
+
+.pfm-image-upload:active {
+  transform: scale(0.98);
+}
+
+.pfm-image-preview {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pfm-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #b9b9c0;
+}
+
+.pfm-image-placeholder span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.pfm-image-input {
+  display: none;
+}
+
+.pfm-fields-col {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---- Grids ---- */
+.pfm-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pfm-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pfm-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* ---- Divider between sections ---- */
+.pfm-divider {
+  height: 1px;
+  background: #ececef;
+  margin: 0;
+}
+
+/* ---- Footer actions ---- */
+.pfm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #ececef;
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .pfm-top-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pfm-image-upload {
+    align-self: flex-start;
+  }
+  .pfm-grid-3,
+  .pfm-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

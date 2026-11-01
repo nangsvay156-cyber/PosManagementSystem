@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@theme {
+  /* ---------- Color system ---------- */
+  /* Ink navy: structure, sidebar, headers — confident, not corporate-blue */
+  --color-ink-950: #0b1220;
+  --color-ink-900: #0f172a;
+  --color-ink-800: #16213a;
+  --color-ink-700: #1f2c4a;
+  --color-ink-600: #2c3e63;
+  --color-ink-500: #44588a;
+
+  /* Workspace neutrals: warm, near-white, not sterile gray */
+  --color-paper-50: #fbfaf8;
+  --color-paper-100: #f5f3ee;
+  --color-paper-200: #ece8e0;
+  --color-paper-300: #dcd6c9;
+  --color-paper-400: #b8b0a0;
+
+  /* Register amber: the one accent. Receipts, action, alerts. */
+  --color-amber-400: #ffb454;
+  --color-amber-500: #f59e2c;
+  --color-amber-600: #d97f0f;
+  --color-amber-700: #b3640a;
+
+  /* Status colors */
+  --color-mint-500: #16a34a;
+  --color-mint-100: #dcfce7;
+  --color-rose-500: #e11d48;
+  --color-rose-100: #ffe4e8;
+  --color-sky-500: #0284c7;
+  --color-sky-100: #e0f2fe;
+
+  /* ---------- Typography ---------- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* ---------- Radius ---------- */
+  --radius-card: 14px;
+  --radius-control: 10px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: var(--color-ink-900);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-paper-100);
+    color: var(--color-ink-900);
+  }
+
+  /* Tabular numerals everywhere prices/quantities appear */
+  .font-mono, .num {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum";
+  }
+
+  ::selection {
+    background-color: var(--color-amber-400);
+    color: var(--color-ink-950);
+  }
+
+  /* Visible keyboard focus everywhere — required for a real workplace tool */
+  :focus-visible {
+    outline: 2px solid var(--color-amber-500);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-paper-300) transparent;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

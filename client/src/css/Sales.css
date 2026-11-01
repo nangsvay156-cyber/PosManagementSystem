@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700&family=Moul&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Espresso / ink */
+  --ink-900: #2b1b12;
+  --ink-700: #4a3223;
+  --ink-500: #7a6152;
+  --ink-400: #a6907e;
+
+  /* Paper / cream */
+  --paper-50: #fbf6ee;
+  --paper-100: #f3e9d8;
+  --paper-200: #e6d4b8;
+  --paper-300: #d6be99;
+
+  /* Accents */
+  --gold-500: #b8752d;
+  --gold-600: #9c5f1f;
+  --forest-500: #3a5a40;
+  --forest-600: #2c4530;
+  --brick-500: #a3312b;
+  --brick-600: #862722;
+
+  --radius-card: 14px;
+  --radius-control: 8px;
+
+  --font-display: 'Moul', 'Khmer OS Muol Light', serif;
+  --font-body: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* ===========================
+   Sales Layout
+=========================== */
+
+.sales-layout {
+  display: grid;
+  height: calc(100vh - 112px);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .sales-layout {
+    grid-template-columns: 1fr 400px;
+  }
+}
+.sales-panel {
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-card, 12px);
+  border: 1px solid #e4e4e7;
+  background-color: #ffffff;
+  padding: 16px;
+}

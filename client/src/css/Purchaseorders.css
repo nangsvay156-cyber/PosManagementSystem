@@ -1,0 +1,32 @@
+.po-number {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 600;
+}
+
+.po-filter-wrap {
+  margin-bottom: 16px;
+  max-width: 320px; /* max-w-xs */
+}
+
+.po-row-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.po-icon-btn {
+  border-radius: 8px;
+  padding: 8px;
+  color: #71717a; /* ink-500 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+.po-icon-btn:hover {
+  background-color: #e4e4e7; /* paper-200 */
+}

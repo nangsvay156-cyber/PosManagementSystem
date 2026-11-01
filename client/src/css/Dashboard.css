@@ -1,0 +1,317 @@
+.dash-welcome {
+  margin-bottom: 28px;
+}
+
+.dash-welcome-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #18181b;
+  margin: 0 0 2px 0;
+}
+
+.dash-welcome-sub {
+  font-size: 14px;
+  color: #71717a;
+  margin: 0;
+}
+
+.dash-welcome-sub span {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* ---- KPI grid ---- */
+.dash-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .dash-kpi-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.dash-kpi-card {
+  border-radius: var(--radius-card, 12px);
+  border: 1px solid #e4e4e7;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.dash-kpi-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-kpi-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #71717a;
+  margin: 0;
+}
+
+.dash-kpi-icon {
+  display: flex;
+  height: 36px;
+  width: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.dash-kpi-icon.amber  { background-color: #fef3c7; color: #d97706; }
+.dash-kpi-icon.green  { background-color: #d1fae5; color: #10b981; }
+.dash-kpi-icon.blue   { background-color: #dbeafe; color: #3b82f6; }
+.dash-kpi-icon.rose   { background-color: #ffe4e6; color: #f43f5e; }
+
+.dash-kpi-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: #18181b;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  margin: 0;
+  line-height: 1;
+}
+
+.dash-kpi-value.small {
+  font-size: 20px;
+}
+
+.dash-kpi-footer {
+  font-size: 12px;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+/* ---- Main content grid ---- */
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .dash-grid {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+/* ---- Section card ---- */
+.dash-card {
+  border-radius: var(--radius-card, 12px);
+  border: 1px solid #e4e4e7;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.dash-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0;
+}
+
+.dash-card-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #f59e0b;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.dash-card-link:hover {
+  text-decoration: underline;
+}
+
+.dash-card-body {
+  padding: 0;
+}
+
+/* ---- Recent sales list ---- */
+.dash-sale-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f4f4f5;
+  transition: background-color 0.1s ease;
+}
+
+.dash-sale-row:last-child {
+  border-bottom: none;
+}
+
+.dash-sale-row:hover {
+  background-color: #fafafa;
+}
+
+.dash-sale-invoice {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: #18181b;
+  margin: 0;
+}
+
+.dash-sale-customer {
+  font-size: 12px;
+  color: #71717a;
+  margin: 0;
+}
+
+.dash-sale-right {
+  text-align: right;
+}
+
+.dash-sale-amount {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0;
+}
+
+.dash-sale-time {
+  font-size: 11px;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+.dash-empty-row {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #a1a1aa;
+}
+
+/* ---- Low stock list ---- */
+.dash-stock-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.dash-stock-row:last-child {
+  border-bottom: none;
+}
+
+.dash-stock-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #18181b;
+  margin: 0;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-stock-sku {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+.dash-stock-qty {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #f43f5e;
+  background-color: #ffe4e6;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+/* ---- Quick actions ---- */
+.dash-quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 20px;
+}
+
+.dash-quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: var(--radius-control, 8px);
+  border: 1px solid #e4e4e7;
+  background: none;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3f3f46;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.dash-quick-btn:hover {
+  border-color: #f59e0b;
+  background-color: #fffbeb;
+  color: #18181b;
+}
+
+.dash-quick-btn-icon {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.dash-quick-btn-icon.amber { background-color: #fef3c7; color: #d97706; }
+.dash-quick-btn-icon.ink   { background-color: #f4f4f5; color: #52525b; }
+.dash-quick-btn-icon.blue  { background-color: #dbeafe; color: #3b82f6; }
+.dash-quick-btn-icon.green { background-color: #d1fae5; color: #10b981; }
+
+/* ---- Loading skeleton ---- */
+.dash-skeleton {
+  background: linear-gradient(90deg, #f4f4f5 25%, #e4e4e7 50%, #f4f4f5 75%);
+  background-size: 200% 100%;
+  animation: dash-shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+
+@keyframes dash-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.dash-kpi-skeleton-value {
+  height: 28px;
+  width: 80px;
+}
+
+.dash-kpi-skeleton-footer {
+  height: 12px;
+  width: 100px;
+  margin-top: 4px;
+}

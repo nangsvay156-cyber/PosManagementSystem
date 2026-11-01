@@ -1,0 +1,108 @@
+.customers-name {
+  font-weight: 500;
+}
+
+.customers-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.customers-credit-owed {
+  font-weight: 600;
+  color: #f43f5e; /* rose-500 */
+}
+
+.customers-credit-zero {
+  color: #a1a1aa; /* ink-400 */
+}
+
+.customers-row-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.customers-icon-btn {
+  border-radius: 8px;
+  padding: 8px;
+  color: #71717a; /* ink-500 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+.customers-icon-btn:hover {
+  background-color: #e4e4e7; /* paper-200 */
+}
+
+.customers-icon-btn.danger {
+  color: #f43f5e; /* rose-500 */
+}
+
+.customers-icon-btn.danger:hover {
+  background-color: #ffe4e6; /* rose-100 */
+}
+
+.customers-search-wrap {
+  margin-bottom: 16px;
+  max-width: 320px; /* max-w-xs */
+}
+
+.customers-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customers-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+/* ---- Purchase history modal ---- */
+.customers-history-list {
+  max-height: 384px; /* max-h-96 */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.customers-history-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--radius-control, 8px);
+  border: 1px solid #e4e4e7; /* paper-200 */
+  padding: 12px;
+}
+
+.customers-history-invoice {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: #18181b; /* ink-900 */
+  margin: 0;
+}
+
+.customers-history-date {
+  font-size: 12px;
+  color: #71717a; /* ink-500 */
+  margin: 0;
+}
+
+.customers-history-right {
+  text-align: right;
+}
+
+.customers-history-amount {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 600;
+  color: #18181b; /* ink-900 */
+  margin: 0 0 4px 0;
+}
